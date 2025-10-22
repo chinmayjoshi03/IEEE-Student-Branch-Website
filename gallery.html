@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - IEEE Student Branch CEV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span class="news-tag">NEWS</span>
+        <div class="marquee">
+            <span>🎉 IEEE Day 2024 Celebrations | New Workshop Series Starting Soon | Join Our Technical Chapters | Student Membership Drive Open</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://via.placeholder.com/120x40/0066CC/FFFFFF?text=IEEE+CEV" alt="IEEE Student Branch CEV">
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="execom.html" class="nav-link">Execom</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Gallery</h1>
+            <p>Explore our memorable moments, events, and achievements through our photo gallery.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="competitions">Competitions</button>
+                <button class="filter-btn" data-filter="ieee-day">IEEE Day</button>
+                <button class="filter-btn" data-filter="team">Team</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items will be populated by JavaScript -->
+                <div class="gallery-item" data-category="ieee-day">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/0066CC/FFFFFF?text=IEEE+Day+2024" alt="IEEE Day 2024">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>IEEE Day 2024</h3>
+                                <p>Annual IEEE Day Celebration</p>
+                                <button class="view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/28a745/FFFFFF?text=AI+Workshop" alt="AI Workshop">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>AI & ML Workshop</h3>
+                                <p>Hands-on Machine Learning Session</p>
+                                <button class="view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="competitions">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/dc3545/FFFFFF?text=Coding+Contest" alt="Coding Contest">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Coding Competition</h3>
+                                <p>Annual Programming Contest</p>
+                                <button class="view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/6f42c1/FFFFFF?text=Tech+Seminar" alt="Technical Seminar">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Technical Seminar</h3>
+                                <p>Industry Expert Session</p>
+                                <button class="view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="team">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/fd7e14/FFFFFF?text=Team+Photo" alt="Team Photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Executive Committee</h3>
+                                <p>IEEE SB CEV Team 2024</p>
+                                <button class="view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/20c997/FFFFFF?text=IoT+Workshop" alt="IoT Workshop">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>IoT Workshop</h3>
+                                <p>Internet of Things Session</p>
+                                <button class="view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" onclick="prevImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-next" onclick="nextImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/120x40/0066CC/FFFFFF?text=IEEE+CEV" alt="IEEE Student Branch CEV">
+                    </div>
+                    <p>Advancing technology for humanity through innovation, education, and professional development.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="execom.html">Execom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>IEEE Resources</h4>
+                    <ul>
+                        <li><a href="https://www.ieee.org" target="_blank">IEEE.org</a></li>
+                        <li><a href="https://ieeexplore.ieee.org" target="_blank">IEEE Xplore</a></li>
+                        <li><a href="https://www.ieee.org/membership" target="_blank">Membership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> ieee@cev.ac.in</p>
+                        <p><i class="fas fa-phone"></i> +91 123 456 7890</p>
+                        <p><i class="fas fa-map-marker-alt"></i> CEV Campus, Vadakara</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 IEEE Student Branch CEV. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

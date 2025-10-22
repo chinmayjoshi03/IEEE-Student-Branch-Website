@@ -1,0 +1,125 @@
+/* About Us Page Specific Styles */
+
+.page-header {
+    background: linear-gradient(135deg, var(--light-secondary) 0%, var(--light-tertiary) 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.page-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.about-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.about-text .btn {
+    margin-top: 30px;
+}
+
+.about-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pillar {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background-color: var(--light-secondary);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px var(--card-shadow);
+}
+
+.pillar-icon {
+    font-size: 2rem;
+    color: var(--ieee-blue);
+    margin-top: 5px;
+    min-width: 50px;
+}
+
+.pillar h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.pillar p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 100px 0 60px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .pillar {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .pillar-icon {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+}
